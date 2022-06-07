@@ -24,13 +24,22 @@
         android:textSize="16sp"
         android:textStyle="italic|bold" />
 
-    <EditText
+
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter Mobile Number"
-        android:inputType="phone"
-        android:textColor="@color/black"
-        android:textColorHint="@color/purple_200"
-        android:textSize="14sp" />
+        android:hint="Enter Password"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:text="+923451111111"
+            android:textColor="@color/black"
+            android:textColorHint="@color/purple_200"
+            android:textSize="14sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 
 </LinearLayout>
