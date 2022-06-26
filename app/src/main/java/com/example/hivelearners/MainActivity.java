@@ -113,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
         num0_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // on 0 pressd
                 screen1_tv.setText(screen1_tv.getText().toString().concat(num0_btn.getText().toString()));
 
             }
