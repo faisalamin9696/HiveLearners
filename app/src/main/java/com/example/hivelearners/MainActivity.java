@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     TextView screen1_tv;
-    Button num1_btn, num2_btn, num3_btn, num4_btn, num5_btn, num6_btn, num7_btn, num8_btn, num9_btn, num0_btn;
+    Button num1_btn, num2_btn, num3_btn, num4_btn, num5_btn, num6_btn, num7_btn, num8_btn, num9_btn, num0_btn, decimal_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         num8_btn = findViewById(R.id.num8_btn);
         num9_btn = findViewById(R.id.num9_btn);
         num0_btn = findViewById(R.id.num0_btn);
+        decimal_btn = findViewById(R.id.decimal_btn);
 
 
         num1_btn.setOnClickListener(new View.OnClickListener() {
@@ -118,6 +119,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        decimal_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (!screen1_tv.getText().toString().contains(".")) {
+                    screen1_tv.setText(screen1_tv.getText().toString().concat(decimal_btn.getText().toString()));
+
+                }
+
+
+            }
+        });
 
 
     }
