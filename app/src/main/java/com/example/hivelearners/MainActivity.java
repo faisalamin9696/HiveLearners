@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView screen1_tv, screen2_tv;
     Button num1_btn, num2_btn, num3_btn, num4_btn, num5_btn, num6_btn, num7_btn,
-            num8_btn, num9_btn, num0_btn, decimal_btn, plus_btn, minus_btn, equal_btn;
+            num8_btn, num9_btn, num0_btn, decimal_btn, plus_btn, minus_btn, equal_btn, trim_btn;
     int first_num;
 
     @Override
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         plus_btn = findViewById(R.id.plus_btn);
         minus_btn = findViewById(R.id.minus_btn);
         equal_btn = findViewById(R.id.equal_btn);
+        trim_btn = findViewById(R.id.trim_btn);
 
 
         num1_btn.setOnClickListener(new View.OnClickListener() {
@@ -177,5 +178,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        trim_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (screen1_tv.getText() != "") {
+                    screen1_tv.setText(screen1_tv.getText().toString().substring(0, screen1_tv.getText().length() - 1));
+                }
+
+            }
+        });
     }
+
 }
