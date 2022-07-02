@@ -10,25 +10,109 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="5dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/screen1_tv"
+        <androidx.cardview.widget.CardView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textAlignment="center"
-            android:textSize="24sp" />
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
 
-        <TextView
-            android:id="@+id/screen2_tv"
-            android:layout_width="100dp"
+            <TextView
+                android:id="@+id/screen1_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="24sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/black"
-            android:textAlignment="center"
+            app:cardBackgroundColor="@color/cardview_dark_background"
+            app:cardCornerRadius="4dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true">
+
+            <TextView
+                android:id="@+id/screen2_tv"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num1_btn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/black"
+            android:text="1"
             android:textColor="@color/white"
-            android:textSize="24sp" />
+            app:cornerRadius="20dp" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num2_btn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/black"
+            android:text="2"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num3_btn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/black"
+            android:text="3"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/trim_btn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="#FF9800"
+            android:text="⌫"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/del_btn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#E91E63"
+            android:text="⌘"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -38,84 +122,62 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <androidx.cardview.widget.CardView
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num4_btn"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/black"
+            android:text="4"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
 
-            <Button
-                android:id="@+id/num1_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="1"
-                android:textColor="@color/white" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num5_btn"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/black"
+            android:text="5"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
 
-            <Button
-                android:id="@+id/num2_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="2"
-                android:textColor="@color/white" />
-        </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num6_btn"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
-
-            <Button
-                android:id="@+id/num3_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="3"
-                android:textColor="@color/white" />
-        </androidx.cardview.widget.CardView>
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/black"
+            android:text="6"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
 
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/minus_btn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="-"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
 
-            <Button
-                android:id="@+id/trim_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="CE"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
-
-            <Button
-                android:id="@+id/del_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="C"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-        </androidx.cardview.widget.CardView>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/multiply_btn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"
+            android:text="*"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -125,82 +187,64 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <androidx.cardview.widget.CardView
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num7_btn"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/black"
+            android:text="7"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
 
-            <Button
-                android:id="@+id/num4_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="4"
-                android:textColor="@color/white" />
-        </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num8_btn"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/black"
+            android:text="8"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
 
-            <Button
-                android:id="@+id/num5_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="5"
-                android:textColor="@color/white" />
-        </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num9_btn"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/black"
+            android:text="9"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
 
-            <Button
-                android:id="@+id/num6_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="6"
-                android:textColor="@color/white" />
-        </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/plus_btn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="+"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
 
-            <Button
-                android:id="@+id/minus_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="-"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-        </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
-
-            <Button
-                android:id="@+id/multiply_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="*"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-        </androidx.cardview.widget.CardView>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/divide_btn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/teal_700"
+            android:text="÷"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -210,150 +254,48 @@
         android:gravity="center"
         android:orientation="horizontal">
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/num0_btn"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/black"
+            android:text="0"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
 
-            <Button
-                android:id="@+id/num7_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="7"
-                android:textColor="@color/white" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/percent_btn"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/black"
+            android:text="%"
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
 
-            <Button
-                android:id="@+id/num8_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="8"
-                android:textColor="@color/white" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/decimal_btn"
+            style="@style/Widget.AppCompat.Button"
             android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:backgroundTint="@color/black"
+            android:text="."
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
 
-            <Button
-                android:id="@+id/num9_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="9"
-                android:textColor="@color/white" />
-        </androidx.cardview.widget.CardView>
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
-
-            <Button
-                android:id="@+id/plus_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="+"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
-
-            <Button
-                android:id="@+id/divide_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="÷"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-        </androidx.cardview.widget.CardView>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
-
-            <Button
-                android:id="@+id/num0_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="0"
-                android:textColor="@color/white" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
-
-            <Button
-                android:id="@+id/decimal_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="."
-                android:textColor="@color/white" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
-
-            <Button
-                android:id="@+id/percent_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="%"
-                android:textColor="@color/white" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="4dp">
-
-            <Button
-                android:id="@+id/equal_btn"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/black"
-                android:text="="
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-        </androidx.cardview.widget.CardView>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/equal_btn"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/purple_500"
+            android:text="="
+            android:textColor="@color/white"
+            app:cornerRadius="20dp" />
     </LinearLayout>
 </LinearLayout>

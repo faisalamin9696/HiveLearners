@@ -13,8 +13,8 @@ public class MainActivity extends AppCompatActivity {
 
     TextView screen1_tv, screen2_tv;
     Button num1_btn, num2_btn, num3_btn, num4_btn, num5_btn, num6_btn, num7_btn,
-            num8_btn, num9_btn, num0_btn, decimal_btn, plus_btn, minus_btn, equal_btn, trim_btn;
-    int first_num;
+            num8_btn, num9_btn, num0_btn, decimal_btn, plus_btn, minus_btn, equal_btn, trim_btn, del_btn;
+    float first_num;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
         minus_btn = findViewById(R.id.minus_btn);
         equal_btn = findViewById(R.id.equal_btn);
         trim_btn = findViewById(R.id.trim_btn);
+        del_btn = findViewById(R.id.del_btn);
 
 
         num1_btn.setOnClickListener(new View.OnClickListener() {
@@ -163,17 +164,25 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String stored_sign = screen2_tv.getText().toString();
+                float second_num = Float.parseFloat(screen1_tv.getText().toString());
                 if (stored_sign.equals("+")) {
-                    int result = first_num + Integer.parseInt(screen1_tv.getText().toString());
-                    Toast.makeText(MainActivity.this, String.valueOf(result), Toast.LENGTH_SHORT).show();
+                    float result = first_num + second_num;
+                    screen1_tv.setText(first_num + stored_sign + second_num + " = " + result);
 
                 }
                 if (stored_sign.equals("-")) {
-                    int result = first_num - Integer.parseInt(screen1_tv.getText().toString());
-                    Toast.makeText(MainActivity.this, String.valueOf(result), Toast.LENGTH_SHORT).show();
+                    float result = first_num - second_num;
+                    screen1_tv.setText(first_num + stored_sign + second_num + " = " + result);
 
                 }
-
+                if (stored_sign.equals("÷")) {
+                    float result = first_num / second_num;
+                    screen1_tv.setText(first_num + stored_sign + second_num + " = " + result);
+                }
+                if (stored_sign.equals("*")) {
+                    float result = first_num * second_num;
+                    screen1_tv.setText(first_num + stored_sign + second_num + " = " + result);
+                }
 
             }
         });
@@ -181,10 +190,19 @@ public class MainActivity extends AppCompatActivity {
         trim_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (screen1_tv.getText() != "") {
+                if (screen1_tv.getText().length() > 0) {
                     screen1_tv.setText(screen1_tv.getText().toString().substring(0, screen1_tv.getText().length() - 1));
                 }
 
+            }
+        });
+
+        del_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                screen1_tv.setText("");
+                first_num = 0;
+                screen2_tv.setText("");
             }
         });
     }
